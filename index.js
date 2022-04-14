@@ -20,7 +20,7 @@ const producto3 = new Postres("torta de oreo", 400);
 
 const producto4 = new Postres("torta 3 leches", 400);
 
-let postresElegidos = [producto1, producto2, producto3, producto4];
+let artEnStock = [producto1, producto2, producto3, producto4];
 
 let nombre = prompt("Ingrese su nombre");
 let apellido = prompt("ingrese su apellido");
@@ -37,10 +37,8 @@ let total = 0;
 
 function postreElegido() {
   while (ingresado != "NO") {
-    console.log(
-      `${nombre}, Elegiste ${postresElegidos[ingresado - 1].articulo}`
-    );
-    total += postresElegidos[ingresado - 1].precioConIva();
+    console.log(`${nombre}, Elegiste ${artEnStock[ingresado - 1].articulo}`);
+    total += artEnStock[ingresado - 1].precioConIva();
 
     ingresado = prompt(
       `${nombre}, ¿quieres seguir eligiendo postres?, elige que otro postre sumas de lo contrario escribe NO
@@ -55,3 +53,6 @@ function postreElegido() {
 }
 
 postreElegido();
+
+const articulo = artEnStock.map((el) => el.articulo);
+console.log(articulo);
