@@ -12,10 +12,11 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background: rgb(241, 241, 241);
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   margin: 20px auto;
 }
@@ -75,7 +76,7 @@ nav {
   font-weight: 600;
 }
 
-.nav-menu li a.active,
+.nav-menu li a.act,
 .nav-menu li a:hover {
   color: rgb(248, 8, 168);
   transition: 0.3s;
@@ -93,7 +94,7 @@ nav {
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .logo {
     margin-left: 50px;
   }
@@ -124,8 +125,75 @@ nav {
   }
   .nav-menu li a {
     font-size: 12px;
+  } */
+}
+
+/* CARTAS */
+.card-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wrapper {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.wrapper .cards-wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cards-wrap .card-item{
+  width: 100%;
+  padding: 10px;
+  box-shadow: 3px 3px 7px rgb(241, 168, 192);
+  margin: 10px;
+}
+
+.cards-wrap .card-inner{
+  background: rgb(241, 168, 192) ;
+}
+
+.cards-wrap .card-top{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.cards-wrap .card-bottom{
+  padding: 15px;
+}
+
+.cards-wrap .card-bottom .card-category{
+  text-transform: uppercase;
+  text-align: center;
+}
+.cards-wrap .card-bottom .card-info {
+  padding: 15px;
+  margin: 10px 0;
+  
+}
+.cards-wrap .card-bottom .card-info .tittle {
+  color:rgb(248, 8, 168) ;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 470px){
+  .cards-wrap .card-item{
+    width: 40%;
   }
 }
+
+@media screen and (min-width: 754px){
+  .cards-wrap .card-item{
+    width: 25%;
+  }
+}
+
 /* POPUP */
 .overlay {
   background: rgba(0, 0, 0, 0.3);
@@ -150,6 +218,9 @@ nav {
   padding: 20px;
   text-align: center;
   width: 600px;
+  transition: .3s ease all;
+  transform: scale(0.7);
+  opacity: 0;
 }
 .popup .btn-close-popup {
   font-size: 16px;
@@ -166,16 +237,17 @@ nav {
   font-size: 40px;
   font-weight: 600px;
   margin-bottom: 10px;
-  /*opacity: 0;*/
+  opacity: 0;
 }
 .popup h4 {
   font-size: 20px;
   font-weight: 300px;
   margin-bottom: 40px;
-  /*opacity: 0;*/
+  opacity: 0;
 }
 
 .popup form .container-inputs {
+  opacity: 0;
 }
 
 .popup form .container-inputs input {
@@ -206,3 +278,44 @@ nav {
 }
 
 /* ANIMACIONES POPUP */
+
+.popup.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.popup.active h3{
+  animation: entradaTitulo .8s ease .5s forwards;
+}
+.popup.active h4{
+  animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup.active .container-inputs{
+  animation: entradaInputs 1s ease 1s forwards;
+}
+
+@keyframes entradaTitulo {
+  from {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes entradaSubtitulo {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes entradaInputs {
+  form {opacity: 0;}
+  to {opacity: 1;}
+  
+}

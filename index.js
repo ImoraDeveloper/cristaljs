@@ -57,6 +57,7 @@ postreElegido();
 const articulo = artEnStock.map((el) => el.articulo);
 console.log(articulo);
 
+/* POP UP*/
 var openPopup = document.getElementById("openpopup");
 var overlay = document.getElementById("overlay");
 var popup = document.getElementById("popup");
