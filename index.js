@@ -56,3 +56,20 @@ postreElegido();
 
 const articulo = artEnStock.map((el) => el.articulo);
 console.log(articulo);
+
+var openPopup = document.getElementById("openpopup");
+var overlay = document.getElementById("overlay");
+var popup = document.getElementById("popup");
+var btnClosePopup = document.getElementById("btn-close-popup");
+
+setTimeout(() => {
+  openPopup.addEventListener("mouseover", function () {
+    overlay.classList.add("active");
+    popup.classList.add("active");
+  });
+}, 1000);
+
+btnClosePopup.addEventListener("click", function () {
+  overlay.classList.remove("active");
+  popup.classList.remove("active");
+});
