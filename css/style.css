@@ -190,7 +190,7 @@ nav {
 
 @media screen and (min-width: 754px){
   .cards-wrap .card-item{
-    width: 25%;
+    width: 30%;
   }
 }
 
@@ -319,7 +319,6 @@ nav {
   to {opacity: 1;}
   
 }
-
 /* contacto */
 
 .formContact{
@@ -333,14 +332,13 @@ nav {
 }
 
 .formHeader{
-
   background-color: rgb(241, 168, 192);
   overflow: hidden;
   color: white;
 }
 
 .formHeader span{
-  font-size: 100px;
+  font-size: 70px;
   display: block;
   text-align: center;
   padding: 2.5rem;
@@ -374,6 +372,7 @@ nav {
 .contact textarea{
   min-height: 100px;
 }
+
 input[type="submit"] {
   padding: 10px;
   border: none;
