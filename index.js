@@ -1,4 +1,4 @@
-alert("¡Bienvenido al lugar mas dulce del mundo!");
+/* alert("¡Bienvenido al lugar mas dulce del mundo!");
 
 class Postres {
   articulo;
@@ -55,7 +55,7 @@ function postreElegido() {
 postreElegido();
 
 const articulo = artEnStock.map((el) => el.articulo);
-console.log(articulo);
+console.log(articulo); */
 
 /* POP UP*/
 var openPopup = document.getElementById("openpopup");
@@ -74,3 +74,14 @@ btnClosePopup.addEventListener("click", function () {
   overlay.classList.remove("active");
   popup.classList.remove("active");
 });
+
+// local storage
+
+/*let usuario = localStorage.getItem('usuario');
+
+if(!usuario == true){
+  usuario = prompt("Por favor ingrese su nombre");
+  localStorage.setItem('usuario', usuario);
+}else{
+  alert('bienvenido nuevamente');
+}*/

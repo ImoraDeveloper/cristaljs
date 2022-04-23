@@ -319,3 +319,66 @@ nav {
   to {opacity: 1;}
   
 }
+
+/* contacto */
+
+.formContact{
+  background-color: #fff;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 7px 13px 37px rgba(0, 0, 0, .8)
+}
+
+.formHeader{
+
+  background-color: rgb(241, 168, 192);
+  overflow: hidden;
+  color: white;
+}
+
+.formHeader span{
+  font-size: 100px;
+  display: block;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.contact{
+  padding: .8rem;
+  overflow: hidden;
+  color: rgb(241, 168, 192);
+}
+
+.contact label, .contact input, .contact textarea{
+  display: block;
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.contact label{
+  font-weight: 700;
+
+}
+.contact input:not([type="submit"]), .contact textarea{
+  border: none;
+  border-bottom: 2px solid rgb(241, 168, 192);
+  margin: 10px;
+  font-size: 20px;
+  outline: none;
+  color: gray;
+}
+
+.contact textarea{
+  min-height: 100px;
+}
+input[type="submit"] {
+  padding: 10px;
+  border: none;
+  background-color: rgb(241, 168, 192);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
