@@ -10,10 +10,14 @@ document.getElementById("contactAction").addEventListener("submit", (e) => {
   let formMsg = document.getElementById("formMsg").value;
 
   if (formName == "" || formEmail == "" || formMsg == "") {
-    alert("Por favor rellena todos los campos");
+    Swal.fire({
+      position: "top",
+      icon: "warning",
+      title: "Por favor rellena todos los campos",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   } else {
-    alert("Se envio tu mensaje");
-
     const mensajeEnviado = {
       nombre: formName,
       email: formEmail,
@@ -25,6 +29,18 @@ document.getElementById("contactAction").addEventListener("submit", (e) => {
 
     document.getElementById("contactAction").reset();
 
-    localStorage.setItem("mensaje recibido", JSON.stringify(mensajeEnviado));
+    localStorage.setItem("mensaje enviado", JSON.stringify(mensajeEnviado));
   }
+});
+
+let btnEnviar = document.getElementById("btnEnviar");
+
+btnEnviar.addEventListener("click", function () {
+  Swal.fire({
+    position: "top",
+    icon: "success",
+    title: "Tu mensaje a sido enviado",
+    showConfirmButton: false,
+    timer: 1500,
+  });
 });
