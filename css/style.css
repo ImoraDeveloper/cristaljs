@@ -140,6 +140,7 @@ nav {
   width: 100%;
 }
 
+
 .wrapper .cards-wrap {
   display: flex;
   justify-content: space-around;
@@ -182,6 +183,51 @@ nav {
   font-size: 18px;
   margin-bottom: 5px;
 }
+/* boton carta  */
+
+.container-button {
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+.button-agregar-carrito {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid rgb(248, 8, 168);
+  color: rgb(248, 8, 168);
+}
+.button-agregar-carrito:hover {
+  color: #fff;
+}
+.button-agregar-carrito:hover:after {
+  height: 100%;
+}
+.button-agregar-carrito:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: rgb(248, 8, 168);
+}
+
 @media screen and (min-width: 470px){
   .cards-wrap .card-item{
     width: 40%;

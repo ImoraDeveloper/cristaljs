@@ -1,0 +1,38 @@
+[
+  {
+    "precio": 800,
+    "id": 1,
+    "title": "12 de facturas",
+    "thumbnailUrl": "https://picsum.photos/id/213/300/300"
+  },
+  {
+    "precio": 500,
+    "id": 2,
+    "title": "Pie de limon",
+    "thumbnailUrl": "https://picsum.photos/id/413/300/300"
+  },
+  {
+    "precio": 3500,
+    "id": 3,
+    "title": "Torta de chocolate",
+    "thumbnailUrl": "https://picsum.photos/id/234/300/300"
+  },
+  {
+    "precio": 50,
+    "id": 4,
+    "title": "Factura por unidad",
+    "thumbnailUrl": "https://picsum.photos/id/123/300/300"
+  },
+  {
+    "precio": 100,
+    "id": 5,
+    "title": "magdalena ",
+    "thumbnailUrl": "https://picsum.photos/id/144/300/300"
+  },
+  {
+    "precio": 1000,
+    "id": 6,
+    "title": "12 de Sandwich",
+    "thumbnailUrl": "https://picsum.photos/id/433/300/300"
+  }
+]
